@@ -1,0 +1,987 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="" IRI="http://semantics.id/ns/example/movie#"/>
+    <Prefix name="ex" IRI="http://semantics.id/ns/example#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class abbreviatedIRI=":Actor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":FilmStudio"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Genre"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Movie"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MovieDirector"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Writer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Cast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#IMDBResource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasCast"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasCastActor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasIMDBResource"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#budget"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasCastCharacter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasProductionCountry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasSpokenLanguage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasWikidataLink"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#homepage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#isAdultMovie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#keyword"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#originalTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#revenue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#runtime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#tagline"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#vote_average"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#vote_count"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:MandevilleFilms"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasActor"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:emma_watson"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:alicia_vikander"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:writer_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:writer_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:writer_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:writer_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":genre_drama"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:writer_5"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasEstablishedDate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:WaltDisneyPictures"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:ewan_mcgregor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasCrew"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasWriter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:dan_stevens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":genre_action"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:bill_condon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasFilmStudio"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":lastName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":genre_animation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasGenre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:julius_avery"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasDateOfBirth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":genre_family"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:marc_forster"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:hayley_atwell"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasMovieDirector"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:EntertainmentOne"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasReleaseYear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":genre_romance"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Actor"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MovieDirector"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Writer"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":FilmStudio"/>
+        <NamedIndividual abbreviatedIRI="ex:EntertainmentOne"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":FilmStudio"/>
+        <NamedIndividual abbreviatedIRI="ex:MandevilleFilms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":FilmStudio"/>
+        <NamedIndividual abbreviatedIRI="ex:WaltDisneyPictures"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Actor"/>
+        <NamedIndividual abbreviatedIRI="ex:alicia_vikander"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":MovieDirector"/>
+        <NamedIndividual abbreviatedIRI="ex:bill_condon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Actor"/>
+        <NamedIndividual abbreviatedIRI="ex:dan_stevens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Actor"/>
+        <NamedIndividual abbreviatedIRI="ex:emma_watson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Actor"/>
+        <NamedIndividual abbreviatedIRI="ex:ewan_mcgregor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Actor"/>
+        <NamedIndividual abbreviatedIRI="ex:hayley_atwell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":MovieDirector"/>
+        <NamedIndividual abbreviatedIRI="ex:julius_avery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Writer"/>
+        <NamedIndividual abbreviatedIRI="ex:julius_avery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":MovieDirector"/>
+        <NamedIndividual abbreviatedIRI="ex:marc_forster"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Movie"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Movie"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Movie"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Writer"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Writer"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Writer"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Writer"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Writer"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Genre"/>
+        <NamedIndividual abbreviatedIRI=":genre_action"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Genre"/>
+        <NamedIndividual abbreviatedIRI=":genre_animation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Genre"/>
+        <NamedIndividual abbreviatedIRI=":genre_drama"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Genre"/>
+        <NamedIndividual abbreviatedIRI=":genre_family"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Genre"/>
+        <NamedIndividual abbreviatedIRI=":genre_romance"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasActor"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+        <NamedIndividual abbreviatedIRI="ex:ewan_mcgregor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasActor"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+        <NamedIndividual abbreviatedIRI="ex:hayley_atwell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasFilmStudio"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+        <NamedIndividual abbreviatedIRI="ex:WaltDisneyPictures"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasGenre"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+        <NamedIndividual abbreviatedIRI=":genre_animation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasGenre"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+        <NamedIndividual abbreviatedIRI=":genre_family"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasMovieDirector"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+        <NamedIndividual abbreviatedIRI="ex:marc_forster"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasWriter"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasWriter"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasActor"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+        <NamedIndividual abbreviatedIRI="ex:alicia_vikander"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasActor"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+        <NamedIndividual abbreviatedIRI="ex:ewan_mcgregor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasFilmStudio"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+        <NamedIndividual abbreviatedIRI="ex:EntertainmentOne"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasGenre"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+        <NamedIndividual abbreviatedIRI=":genre_action"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasGenre"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+        <NamedIndividual abbreviatedIRI=":genre_drama"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasMovieDirector"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+        <NamedIndividual abbreviatedIRI="ex:julius_avery"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasWriter"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+        <NamedIndividual abbreviatedIRI="ex:julius_avery"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasWriter"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasActor"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+        <NamedIndividual abbreviatedIRI="ex:dan_stevens"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasActor"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+        <NamedIndividual abbreviatedIRI="ex:emma_watson"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasActor"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+        <NamedIndividual abbreviatedIRI="ex:ewan_mcgregor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasFilmStudio"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+        <NamedIndividual abbreviatedIRI="ex:WaltDisneyPictures"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasGenre"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+        <NamedIndividual abbreviatedIRI=":genre_family"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasGenre"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+        <NamedIndividual abbreviatedIRI=":genre_romance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasMovieDirector"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+        <NamedIndividual abbreviatedIRI="ex:bill_condon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasWriter"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasWriter"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_5"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasEstablishedDate"/>
+        <NamedIndividual abbreviatedIRI="ex:EntertainmentOne"/>
+        <Literal>1973-01-01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasEstablishedDate"/>
+        <NamedIndividual abbreviatedIRI="ex:MandevilleFilms"/>
+        <Literal>1955-01-01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasEstablishedDate"/>
+        <NamedIndividual abbreviatedIRI="ex:WaltDisneyPictures"/>
+        <Literal>1985-06-21</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:alicia_vikander"/>
+        <Literal>female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:alicia_vikander"/>
+        <Literal>Alicia Vikander</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:bill_condon"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:bill_condon"/>
+        <Literal>Bill Condon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasDateOfBirth"/>
+        <NamedIndividual abbreviatedIRI="ex:dan_stevens"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1982-10-10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:dan_stevens"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:dan_stevens"/>
+        <Literal>Dan Stevens</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasDateOfBirth"/>
+        <NamedIndividual abbreviatedIRI="ex:emma_watson"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1990-04-15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:emma_watson"/>
+        <Literal>female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:emma_watson"/>
+        <Literal>Emma Watson</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasDateOfBirth"/>
+        <NamedIndividual abbreviatedIRI="ex:ewan_mcgregor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1971-03-31</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:ewan_mcgregor"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:ewan_mcgregor"/>
+        <Literal>Ewan McGregor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasDateOfBirth"/>
+        <NamedIndividual abbreviatedIRI="ex:hayley_atwell"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1982-04-05</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:hayley_atwell"/>
+        <Literal>female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:hayley_atwell"/>
+        <Literal>Hayley Atwell</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:julius_avery"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:julius_avery"/>
+        <Literal>Julius Avery</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:marc_forster"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:marc_forster"/>
+        <Literal>Marc Forster</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasReleaseYear"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2018</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasReleaseYear"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasReleaseYear"/>
+        <NamedIndividual abbreviatedIRI="ex:movie_3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2017</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasDateOfBirth"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1966-06-07</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_1"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_1"/>
+        <Literal>Tom McCarthy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_2"/>
+        <Literal>Alex Ross</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_3"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_3"/>
+        <Literal>John Collee</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_4"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_4"/>
+        <Literal>Stephen Chbosky</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI="ex:writer_5"/>
+        <Literal>Evan Spiliotopoulos</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":hasMovieDirector"/>
+        <ObjectProperty abbreviatedIRI=":hasCrew"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":hasWriter"/>
+        <ObjectProperty abbreviatedIRI=":hasCrew"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasActor"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasCrew"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasFilmStudio"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasGenre"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasMovieDirector"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasWriter"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasCast"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasCastActor"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Cast"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasIMDBResource"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasActor"/>
+        <Class abbreviatedIRI=":Actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasCrew"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasFilmStudio"/>
+        <Class abbreviatedIRI=":FilmStudio"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasGenre"/>
+        <Class abbreviatedIRI=":Genre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasMovieDirector"/>
+        <Class abbreviatedIRI=":MovieDirector"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasWriter"/>
+        <Class abbreviatedIRI=":Writer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasCast"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Cast"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasCastActor"/>
+        <Class abbreviatedIRI=":Actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasIMDBResource"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#IMDBResource"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasDateOfBirth"/>
+        <Class abbreviatedIRI=":Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasEstablishedDate"/>
+        <Class abbreviatedIRI=":FilmStudio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <Class abbreviatedIRI=":Actor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <Class abbreviatedIRI=":Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <Class abbreviatedIRI=":Actor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <Class abbreviatedIRI=":FilmStudio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <Class abbreviatedIRI=":Genre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <Class abbreviatedIRI=":Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasReleaseYear"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#budget"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#description"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasCastCharacter"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Cast"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasProductionCountry"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasSpokenLanguage"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasWikidataLink"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#homepage"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#id"/>
+        <Class abbreviatedIRI=":FilmStudio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#id"/>
+        <Class abbreviatedIRI=":Genre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#id"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#id"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#IMDBResource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#isAdultMovie"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#keyword"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#originalTitle"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#revenue"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#runtime"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#tagline"/>
+        <Class abbreviatedIRI=":Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#url"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#IMDBResource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#vote_average"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#IMDBResource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#vote_count"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#IMDBResource"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasDateOfBirth"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasEstablishedDate"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasGender"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasReleaseYear"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#budget"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasCastCharacter"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasProductionCountry"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasSpokenLanguage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#hasWikidataLink"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#homepage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#id"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#isAdultMovie"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#keyword"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#originalTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#revenue"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#runtime"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#tagline"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#url"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#vote_average"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#vote_count"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ex:EntertainmentOne</AbbreviatedIRI>
+        <Literal>Entertainment One</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ex:MandevilleFilms</AbbreviatedIRI>
+        <Literal>Mandeville Films</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ex:WaltDisneyPictures</AbbreviatedIRI>
+        <Literal>Walt Disney Pictures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ex:movie_1</AbbreviatedIRI>
+        <Literal>Christopher Robin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ex:movie_2</AbbreviatedIRI>
+        <Literal>Son of a Gun</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ex:movie_3</AbbreviatedIRI>
+        <Literal>Beauty and the Beast</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":lastName"/>
+        <AbbreviatedIRI>ex:writer_2</AbbreviatedIRI>
+        <Literal>Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Person</AbbreviatedIRI>
+        <Literal>
+		This is a class to describe Person.
+		The class could be specialized into different subclasses, 
+		such as Actor, Writer, and MovieDirector
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:genre_action</AbbreviatedIRI>
+        <Literal>Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:genre_animation</AbbreviatedIRI>
+        <Literal>Animation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:genre_drama</AbbreviatedIRI>
+        <Literal>Drama</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:genre_family</AbbreviatedIRI>
+        <Literal>Family</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:genre_romance</AbbreviatedIRI>
+        <Literal>Romance</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
