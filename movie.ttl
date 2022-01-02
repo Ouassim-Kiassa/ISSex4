@@ -1,0 +1,213 @@
+@prefix : <http://semantics.id/ns/example/movie#> .
+@prefix ex: <http://semantics.id/ns/example#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+## classes 
+:Person a rdfs:Class ;
+	rdfs:comment """
+		This is a class to describe Person.
+		The class could be specialized into different subclasses, 
+		such as Actor, Writer, and MovieDirector
+	""" ;
+.
+:Movie a rdfs:Class .
+:MovieDirector a rdfs:Class ;
+	rdfs:subClassOf :Person ;
+.
+:Writer a rdfs:Class ;
+	rdfs:subClassOf :Person ;
+.
+:Actor a rdfs:Class ;
+	rdfs:subClassOf :Person ;
+.
+:FilmStudio a rdfs:Class .
+:Genre a rdfs:Class .
+
+## properties
+:hasCrew a rdf:Property ;
+	rdfs:domain :Movie ;
+	rdfs:range :Person ;
+.
+:hasMovieDirector a rdf:Property ;
+	rdfs:subPropertyOf :hasCrew ;
+	rdfs:domain :Movie ;
+	rdfs:range :MovieDirector ;
+.
+:hasWriter a rdf:Property ;
+	rdfs:subPropertyOf :hasCrew ;
+	rdfs:domain :Movie ;
+	rdfs:range :Writer ;
+.
+:hasActor a rdf:Property ;
+	rdfs:domain :Movie ;
+	rdfs:range :Actor ;
+.
+:hasGenre a rdf:Property ;
+	rdfs:domain :Movie ;
+	rdfs:range :Genre ;
+.
+:hasFilmStudio a rdf:Property ;
+	rdfs:domain :Movie ;
+	rdfs:range :FilmStudio ;
+.
+:hasReleaseYear a rdf:Property ;
+	rdfs:domain :Movie ;
+	rdfs:range xsd:integer ;
+.
+:hasDateOfBirth a rdf:Property ;
+	rdfs:domain :Person ;
+	rdfs:range xsd:date ;
+.
+:hasName a rdf:Property ;
+	rdfs:domain :Person ;
+	rdfs:range xsd:string ;
+.
+:hasGender a rdf:Property ;
+	rdfs:domain :Person ;
+	rdfs:range xsd:string ;
+.
+:hasEstablishedDate a rdf:Property ;
+	rdfs:domain :FilmStudio ;
+	rdfs:range xsd:date ;
+.
+
+## instances
+
+# genre
+:genre_action a :Genre ;
+	rdfs:label "Action" ;
+.
+:genre_animation a :Genre ;
+	rdfs:label "Animation" ;
+.
+:genre_family a :Genre ;
+	rdfs:label "Family" ;
+.
+:genre_romance a :Genre ;
+	rdfs:label "Romance" ;
+.
+:genre_drama a :Genre ;
+	rdfs:label "Drama" ;
+.
+
+# movie - Christopher Robin
+ex:movie_1 a :Movie ;
+	rdfs:label "Christopher Robin" ;
+	:hasReleaseYear 2018 ;
+	:hasFilmStudio ex:WaltDisneyPictures ;
+	:hasActor ex:ewan_mcgregor , 
+		ex:hayley_atwell ;
+	:hasMovieDirector ex:marc_forster ;
+	:hasWriter ex:writer_1, 
+		ex:writer_2 ;
+	:hasGenre :genre_animation,
+		:genre_family ;
+.
+
+# movie - Son of a Gun
+ex:movie_2 a :Movie ;
+	rdfs:label "Son of a Gun" ;
+	:hasReleaseYear 2014 ;
+	:hasFilmStudio ex:EntertainmentOne ;
+	:hasActor ex:ewan_mcgregor, 
+		ex:alicia_vikander ;
+	:hasMovieDirector ex:julius_avery ;
+	:hasWriter ex:julius_avery, 
+		ex:writer_3 ;
+	:hasGenre :genre_action,
+		:genre_drama ;
+.
+
+# movie - Beauty and the Beast
+ex:movie_3 a :Movie ;
+	rdfs:label "Beauty and the Beast" ;
+	:hasReleaseYear 2017 ;
+	:hasFilmStudio ex:WaltDisneyPictures ;
+	:hasActor ex:ewan_mcgregor , 
+		ex:emma_watson , 
+		ex:dan_stevens ;
+	:hasMovieDirector ex:bill_condon ;
+	:hasWriter ex:writer_4, 
+		ex:writer_5 ;
+	:hasGenre :genre_romance,
+		:genre_family ;
+.
+
+# actor/actress
+ex:ewan_mcgregor a :Actor ;
+	:hasGender "male" ;
+	:hasName "Ewan McGregor" ;
+	:hasDateOfBirth "1971-03-31"^^xsd:date ; 
+.
+ex:hayley_atwell a :Actor ;
+	:hasGender "female" ;
+	:hasName "Hayley Atwell" ;
+	:hasDateOfBirth "1982-04-05"^^xsd:date ;
+.
+ex:alicia_vikander a :Actor ;
+	:hasGender "female" ;
+	:hasName "Alicia Vikander" ;
+.
+ex:dan_stevens a :Actor ;
+	:hasGender "male" ;
+	:hasName "Dan Stevens" ;
+	:hasDateOfBirth "1982-10-10"^^xsd:date ; 
+.
+ex:emma_watson a :Actor ;
+	:hasGender "female" ;
+	:hasName "Emma Watson" ;
+	:hasDateOfBirth "1990-04-15"^^xsd:date ; 
+.
+
+# crew
+ex:marc_forster a :MovieDirector ;
+	:hasGender "male" ;
+	:hasName "Marc Forster" ;
+.
+ex:julius_avery a :MovieDirector, 
+		:Writer ;
+	:hasGender "male" ;
+	:hasName "Julius Avery" ;
+.
+ex:bill_condon a :MovieDirector ;
+	:hasGender "male" ;
+	:hasName "Bill Condon" ;
+.
+ex:writer_1 a :Writer ;
+	:hasGender "male" ;
+	:hasName "Tom McCarthy" ;
+	:hasDateOfBirth "1966-06-07"^^xsd:date ;
+.	
+ex:writer_2 a :Writer ;
+	:hasName "Alex Ross" ;
+	:lastName "Perry" ;
+.
+ex:writer_3 a :Writer ;
+	:hasGender "male" ;
+	:hasName "John Collee" ;
+.
+ex:writer_4 a :Writer ;
+	:hasGender "male" ;
+	:hasName "Stephen Chbosky" ;
+.
+ex:writer_5 a :Writer ;
+	:hasName "Evan Spiliotopoulos" ;
+.
+
+
+# filmstudio
+ex:WaltDisneyPictures a :FilmStudio ;
+	rdfs:label "Walt Disney Pictures" ;
+	:hasEstablishedDate "1985-06-21" ;
+.
+ex:MandevilleFilms a :FilmStudio ;
+	rdfs:label "Mandeville Films" ;
+	:hasEstablishedDate "1955-01-01" ;
+.
+ex:EntertainmentOne a :FilmStudio ;
+	rdfs:label "Entertainment One" ;
+	:hasEstablishedDate "1973-01-01" ;
+.
+
